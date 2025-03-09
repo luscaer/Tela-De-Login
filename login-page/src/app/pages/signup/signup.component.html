@@ -1,0 +1,49 @@
+<app-default-login-layout
+    title="Get Started Now"
+    paragraph=""
+    primaryBtnText="SignUp"
+    checkboxText="I agree to the therms & policy"
+    acountMessage="Have an account?"
+    sign="Sign In"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupform.valid"
+>
+    <form [formGroup]="signupform">
+        <app-primary-input
+            formControlName="name"
+            inputName="name"
+            type="text"
+            label="Your Name"
+            placeholder="Enter your name"
+            >
+            <img src="assets/svg/user-icon.svg"/>
+        </app-primary-input>
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email Address"
+            placeholder="johndoe@gmail.com"
+            >
+            <img src="assets/svg/mail-icon.svg"/>
+        </app-primary-input>
+        <app-primary-input
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Password"
+        placeholder="Enter your Password"
+        >
+        <img src="assets/svg/lock-icon.svg"/>
+        </app-primary-input><app-primary-input
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label="Confirm Your Password"
+        placeholder="Enter your Password again"
+        >
+        <img src="assets/svg/lock-icon.svg"/>
+        </app-primary-input>
+    </form>
+</app-default-login-layout>

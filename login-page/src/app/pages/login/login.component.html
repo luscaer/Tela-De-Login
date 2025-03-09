@@ -1,0 +1,35 @@
+<app-default-login-layout
+    title="Welcome Back!"
+    paragraph="Enter your Credentials to access your account"
+    primaryBtnText="Login"
+    checkboxText="Remember for 30 days"
+    acountMessage="Don't have an account?"
+    sign="Sign Up"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginform.valid"
+>
+    <form [formGroup]="loginform">
+        <app-primary-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email Address"
+            placeholder="johndoe@gmail.com"
+            >
+            <img src="assets/svg/mail-icon.svg"/>
+        </app-primary-input>
+        <div class="password-container">
+            <app-primary-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Password"
+            placeholder="Enter your Password"
+            >
+            <img src="assets/svg/lock-icon.svg"/>
+            </app-primary-input>
+            <span class="forgot-password">Forgot Password?</span>
+        </div>
+    </form>
+</app-default-login-layout>

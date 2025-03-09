@@ -1,0 +1,38 @@
+<main>
+    <section class="form-section">
+        <h1>{{ title }}</h1>
+        <p>{{ paragraph }}</p>
+        <ng-content></ng-content>
+        <div class="remember-terms">
+            <label>
+                <input type="checkbox" id="remember-terms" name="remember-terms">
+                <span id="terms-text">{{ checkboxText }}</span>
+            </label>
+        </div>
+        <button 
+            class="btn-primary"
+            (click)="submit()"
+            [disabled]="disablePrimaryBtn"
+        > {{ primaryBtnText }}</button>
+        <div class="divider">
+            <span>Or</span>
+        </div>
+        <div class="social-buttons">
+            <button class="btn-google">
+                <img src="assets/svg/google-logo.svg" alt="Google Icon" />
+                Sign in with Google
+            </button>
+            <button class="btn-apple">
+                <img src="assets/svg/apple-logo.svg" alt="Apple Icon" />
+                Sign in with Apple
+            </button>
+        </div>
+        <div class="account-message">
+            <span>{{ acountMessage }}</span>
+            <button class="btn-sign" (click)="navigate()">{{ sign }}</button>
+        </div>
+    </section>
+    <section class="main-section">
+        <img src="assets/svg/main-illustration.svg" alt="Ilustração" />
+    </section>
+</main>

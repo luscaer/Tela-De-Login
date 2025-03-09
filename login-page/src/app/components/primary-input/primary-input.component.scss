@@ -1,0 +1,45 @@
+@use "../../../styles/variables.scss" as var; // Importa variáveis de estilo de um arquivo externo
+
+.input-wrapper {
+    color: var.$secondary-text-color; // Define a cor do texto usando a variável $secondary-text-color
+    font-size: 10px; // Define o tamanho da fonte como 10px
+    text-align: start; // Alinha o texto à esquerda
+
+    label {
+        font-size: 14px; // Define o tamanho da fonte como 14px
+        color: black; // Define a cor do texto como preto
+        display: block; // Garante que a label ocupe a linha inteira
+
+    }
+
+    .input-content {
+        display: flex; // Define o layout como flexível (flexbox)
+        width: 100%; // Define a largura como 100% do contêiner pai
+        height: 32px; // Define a altura como 32px
+        border-radius: 8px; // Aplica um border-radius de 8px para arredondar os cantos
+        overflow: hidden; // Garante que o conteúdo interno respeite o border-radius
+        border: 1px solid var.$secondary-text-color;
+
+        input {
+            border: none; // Remove a borda do input
+            padding: 10px 0 10px 20px; // Adiciona padding interno (10px no topo e na base, 20px à esquerda)
+            width: 100%; // Define a largura do input como 100% do contêiner
+            border-radius: 8px 0 0 8px; // Aplica border-radius apenas no lado esquerdo do input
+            font-size: 10px;
+        }
+
+        .icon {
+            background-color: var.$secondary-color; // Define a cor de fundo do ícone usando a variável $primary-color
+            padding: 10px; // Adiciona padding interno de 10px
+            display: flex; // Define o layout como flexível (flexbox)
+            align-items: center; // Centraliza os itens verticalmente
+            justify-content: center; // Centraliza os itens horizontalmente
+            border-radius: 0 8px 8px 0; // Aplica border-radius apenas no lado direito do ícone
+
+            img {
+                height: 20px; // Define a altura da imagem como 20px
+                width: 20px; // Define a largura da imagem como 20px (opcional, para garantir proporção)
+            }
+        }
+    }
+}

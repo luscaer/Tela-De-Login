@@ -1,0 +1,155 @@
+@use "../../../styles/variables.scss" as var; // Importa variáveis de estilo de um arquivo externo
+
+main {
+    display: flex; // Define o layout como flexível (flexbox)
+    height: 100%; // Define a altura do elemento como 100% da viewport
+
+    section {
+        height: 100%; // Define a altura do elemento como 100% da viewport
+        display: flex; // Define o layout como flexível
+    }
+
+    .form-section {
+        flex: 1; // Ocupa o espaço restante disponível no contêiner flexível
+        flex-direction: column; // Organiza os elementos filhos em uma coluna (verticalmente)
+        align-items: flex-start; // Alinha os elementos filhos à esquerda
+        justify-content: center; // Centraliza os elementos filhos verticalmente
+        padding: 0 354px 0 354px; // Adiciona padding à esquerda e à direita de 354px
+
+        h1 {
+            font-size: 30px; // Define o tamanho da fonte do título como 30px
+            margin-bottom: 10px; // Adiciona margem de 20px na base
+            font-weight: 500; // Define a fonte do botão como semi-bold
+        }
+
+        p {
+            font-size: 15px; // Define o tamanho da fonte do parágrafo como 15px
+            margin-bottom: 60px; // Adiciona margem de 60px na base
+        }
+
+        .remember-terms {
+            margin-bottom: 20px; // Adiciona margem de 10px no topo e na base
+
+            label {
+                display: flex; // Define o layout como flexível
+                align-items: center; // Centraliza os itens verticalmente
+                cursor: pointer; // Muda o cursor para pointer (mão) ao passar sobre o label
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px; // Adiciona margem à direita do checkbox
+            }
+
+            #terms-text {
+                font-size: 10px; // Define o tamanho da fonte como 12px (ou o valor desejado)
+            }
+        }
+
+        button {
+            width: 100%; // Define a largura do botão como 100% do contêiner
+            border: none; // Remove a borda do botão
+            border-radius: 10px; // Arredonda as bordas do botão
+            padding: 10px; // Adiciona padding interno de 10px
+            font-size: 14px; // Define o tamanho da fonte como 14px
+            font-weight: 500; // Define a fonte do botão como semi-bold
+            border: none; // Define o botão como sem borda
+            cursor: pointer; // Muda o cursor para pointer (mão) ao passar sobre o botão
+
+            &.btn-primary {
+                background-color: var.$primary-color; // Define a cor de fundo usando a variável $primary-color
+                color: white; // Define a cor do texto como branco
+
+                &:disabled {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .divider {
+            display: flex; // Define o layout como flexível
+            align-items: center; // Centraliza os itens verticalmente
+            width: 100%; // Define a largura como 100% do contêiner
+            margin: 35px 0 90px 0; // Adiciona margem no topo (35px) e na base (90px)
+
+            span {
+                padding: 0 10px; // Adiciona padding à esquerda e à direita do texto "or"
+                z-index: 1; // Define a ordem de sobreposição (z-index) para garantir que o texto fique acima das linhas
+                font-size: 10px; // Define o tamanho da fonte como 12px (ou o valor desejado)
+            }
+
+            &::before,
+            &::after {
+                content: ''; // Adiciona conteúdo vazio aos pseudo-elementos
+                flex: 1; // Ocupa o espaço restante disponível
+                height: 1px; // Define a altura das linhas como 1px
+                background-color: #ccc; // Define a cor das linhas como cinza claro
+            }
+        }
+
+        .social-buttons {
+            display: flex; // Define o layout como flexível
+            gap: 22px; // Adiciona um espaçamento de 22px entre os botões
+            width: 100%; // Define a largura como 100% do contêiner
+
+            button {
+                flex: 1; // Ocupa o espaço disponível igualmente entre os botões
+                display: flex;
+                align-items: center; // Centraliza os itens verticalmente
+                justify-content: center; // Centraliza os itens horizontalmente
+                border: 1px solid var.$secondary-text-color; // Adiciona uma borda sólida com a cor da variável $secondary-text-color
+                background-color: white; // Define a cor de fundo como branco
+            }
+
+            img {
+                width: 20px; // Define a largura da imagem como 20px
+                height: 20px; // Define a altura da imagem como 20px
+                margin-right: 10px; // Adiciona margem à direita da imagem
+            }
+
+            .btn-google {
+                &:hover {
+                    background-color: #f8f9fa; // Muda a cor de fundo ao passar o mouse sobre o botão do Google
+                }
+            }
+
+            .btn-apple {
+                &:hover {
+                    background-color: #f8f9fa; // Muda a cor de fundo ao passar o mouse sobre o botão da Apple
+                }
+            }
+        }
+
+        .account-message {
+            display: flex; // Usa Flexbox para alinhar os elementos
+            align-items: center; // Centraliza os elementos verticalmente
+            justify-content: center; // Centraliza os elementos horizontalmente
+            margin-top: 20px; // Adiciona um espaçamento acima do contêiner (opcional)
+            align-self: center; // Centraliza o contêiner em relação ao eixo transversal
+            width: 60%; // Define a largura como 60% do contêiner
+
+            span {
+                font-size: 14px; // Define o tamanho da fonte do texto
+                color: var.$text-color; // Define a cor do texto
+            }
+
+            .btn-sign {
+                background-color: transparent; // Remove o fundo do botão
+                border: none; // Remove a borda do botão
+                text-decoration: none; // Adiciona sublinhado ao texto do botão
+                font-size: 14px; // Define o tamanho da fonte
+                color: var.$tertiary-text-color; // Define a cor do texto (azul, por exemplo)
+                padding: 0px; // Remove o padding interno
+                max-width: 30%; // Define a largura máxima do botão como 30%
+                cursor: pointer; // Muda o cursor para pointer (mão) ao passar o mouse
+
+                &:hover {
+                    text-decoration: underline; // Adiciona sublinhado ao passar o mouse
+                }
+            }
+        }
+    }
+
+    .main-section {
+        flex: 0.45; // Ocupa 45% do espaço disponível no contêiner flexível
+    }
+}

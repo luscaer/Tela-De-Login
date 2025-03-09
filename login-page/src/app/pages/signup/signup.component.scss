@@ -1,0 +1,28 @@
+@use "../../../styles/variables.scss" as var;
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 20px;
+
+    .password-container {
+        display: flex; // Usa Flexbox para organizar os elementos
+        flex-direction: column; // Organiza os elementos em uma coluna (um abaixo do outro)
+        margin-bottom: 10px; // Adiciona um espaçamento abaixo do contêiner (opcional)
+    }
+
+    .forgot-password {
+        font-size: 14px; // Define o tamanho da fonte
+        color: var.$tertiary-text-color; // Define a cor do texto (azul, por exemplo)
+        text-decoration: none; // Remove o sublinhado padrão
+        margin-top: 5px; // Adiciona um espaçamento abaixo do span (opcional)
+        align-self: flex-end; // Alinha os elementos à direita
+        cursor: pointer; // Muda o cursor para pointer (mão) ao passar o mouse
+
+        &:hover {
+            text-decoration: underline; // Adiciona sublinhado ao passar o mouse
+        }
+    }
+}
